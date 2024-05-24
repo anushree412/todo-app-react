@@ -1,5 +1,3 @@
-// TaskList.js
-
 import React from 'react';
 import { connect } from 'react-redux';
 import { deleteTask, toggleTaskCompletion } from '../actions';
@@ -12,29 +10,33 @@ function TaskList({ tasks, deleteTask, toggleTaskCompletion }) {
   return (
     <div className="items-container">
       {tasks.map((task, index) => (
-        <div className="row kg-row" key={index}>
-          <div className="col-sm-1">
+        <div
+          className={`task-card ${task.completed ? 'bg-completed' : 'bg-pending'}`}
+          key={index}
+        >
+          <div className="task-header">
             <div className="form-check">
-              <input 
-                className="form-check-input" 
-                type="checkbox" 
-                value="" 
-                id={`flexCheck${index}`}
+              <input
+                className="form-check-input"
+                type="checkbox"
                 checked={task.completed}
                 onChange={() => handleToggleCompletion(index)}
               />
             </div>
-          </div>
-          <div className="col-sm-4">{task.task}</div>
-          <div className="col-sm-3">{task.dueDate}</div>
-          <div className="col-sm-2">
             <button
               type="button"
-              className="btn btn-danger kg-button"
+              className="btn btn-danger"
               onClick={() => deleteTask(index)}
             >
               Delete
             </button>
+          </div>
+          <div className="task-body">
+            <h5>{task.task}</h5>
+            <p>{task.dueDate}</p>
+          </div>
+          <div className="task-footer">
+            <p>{task.completed ? 'Completed' : 'Pending'}</p>
           </div>
         </div>
       ))}

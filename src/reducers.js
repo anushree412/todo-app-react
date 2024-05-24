@@ -2,8 +2,8 @@
 
 const initialState = {
   tasks: [
-    { task: 'Task 1', dueDate: '01/04/2024', completed: false },
-    { task: 'Task 2', dueDate: '02/04/2024', completed: false },
+    { task: 'Groceries Shopping', dueDate: '01/04/2024', completed: false },
+    { task: 'Yoga Class', dueDate: '02/04/2024', completed: false },
     // Add more tasks as needed
   ],
 };

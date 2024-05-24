@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 function Addtodo({ addTask }) {
@@ -19,6 +18,7 @@ function Addtodo({ addTask }) {
         <div className="col-sm-6">
           <input
             type="text"
+            className="form-control"
             placeholder="Enter todo here"
             value={newTask}
             onChange={(e) => setNewTask(e.target.value)}
@@ -27,6 +27,7 @@ function Addtodo({ addTask }) {
         <div className="col-sm-4">
           <input
             type="date"
+            className="form-control"
             value={newDate}
             onChange={(e) => setNewDate(e.target.value)}
           />
@@ -34,7 +35,7 @@ function Addtodo({ addTask }) {
         <div className="col-sm-2">
           <button
             type="button"
-            className="btn btn-success kg-button"
+            className="btn-custom btn-primary me-2"
             onClick={handleAddTask}
           >
             Add
