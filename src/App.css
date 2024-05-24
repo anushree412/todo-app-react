@@ -9,7 +9,7 @@ body, html{
 
 /* Set up grid layout */
 body {
-  background-image: url("assets/leavesbg.jpg");
+  /* background-image: url("assets/leavesbg.jpg"); */
   background-size: contain;
   display: grid;
   grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
@@ -207,7 +207,7 @@ input {
 
 /* Custom styles for the button */
 .btn-custom-task{
-  background-color: #96ca1d; /* Button background color */
+  background-color: #347f39; /* Button background color */
   color: #ffffff; /* Button text color */
   border: none;
   padding: 6px 6px;
