@@ -36,11 +36,13 @@ body {
 
 /* Default light mode */
 body.light-mode {
-  background-color: #bde6ad; /* Light blue background color */
+  background-image: url("assets/lightMode.jpg");
+  background-size: cover;
+  /* background-color: #bde6ad; Light blue background color */
 }
 
 .todo-contain.light-mode {
-  background-color: #bde6ad;
+  background-color: #bde6ad00;
   color: #212529;
 }
 
@@ -59,11 +61,13 @@ body.light-mode {
 
 /* Dark mode */
 body.dark-mode {
+  background-image: url("assets/darkMode.jpg");
+  background-size: cover;
   background-color: #232824; /* Dark blue background color */
 }
 
 .todo-contain.dark-mode {
-  background-color: #232824;
+  background-color: #23282400;
   color: #000000;
 }
 
@@ -104,6 +108,7 @@ h1 {
 
 input {
   width: 100%;
+  border:3px solid green;
 }
 
 .items-container {
@@ -136,7 +141,7 @@ input {
 
 .navbar-brand-custom {
   font-weight: 900;
-  font-size: 30px;
+  font-size: 35px;
   color: #ffffff;
 }
 
