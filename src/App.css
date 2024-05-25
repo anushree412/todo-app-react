@@ -15,11 +15,12 @@ body {
 
 /* Ensure the todo-contain div takes up at least one full page height */
 .todo-contain {
-  padding: 20px; /* Adjust padding as needed */
-  height: calc(100vh - 56px - 80px); /* Adjust according to the height of header and footer */
-  /* 56px for header, 80px for footer */
+  padding: 20px; 
+  height: calc(100vh - 80px); /* Adjust according to the height of footer */
+  overflow-y: auto; /* Enable scrolling if content overflows */
 }
 
+/* Footer styles */
 .footer {
   background-color: #343a40; /* Dark background color */
   color: #ffffff; /* Text color */
@@ -38,16 +39,17 @@ body {
 body.light-mode {
   background-image: url("assets/lightMode.jpg");
   background-size: cover;
+  background-color: #347f39;
   /* background-color: #bde6ad; Light blue background color */
 }
 
 .todo-contain.light-mode {
-  background-color: #bde6ad00;
+  background-color: #4aca1800;
   color: #212529;
 }
 
 .light-mode .navbar-brand-custom {
-  color: #274522;
+  color: #000000;
 }
 
 .light-mode .navbar-nav .nav-link {
@@ -108,7 +110,6 @@ h1 {
 
 input {
   width: 100%;
-  border:3px solid green;
 }
 
 .items-container {
@@ -117,6 +118,7 @@ input {
   gap: 20px;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .kg-row {
@@ -146,14 +148,13 @@ input {
 }
 
 .task-card {
-  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 10px;
   width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .tasks-summary-custom {
